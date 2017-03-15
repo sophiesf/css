@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style type="text/css">
+  *{
+    margin:0;
+    padding: 0;
+  }
+
+  html{
+    font-size: 12px;
+    font-family: -apple-system,PingFang SC,Hiragino Sans GB,Arial,Microsoft YaHei,Helvetica Neue,sans-serif;
+    text-rendering: optimizeLegibility;
+    background:#f4f5f5;
+    color: #333;
+    word-break: break-word;
+  }
+
+  html,body{
+    height: 100%;
+    width: 100%;
+  }
+
+  .page-hide{
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.3);
+    padding-top: 150px;
+  }
+  
+  .container{
+    position: relative;
+    width: 250px;
+    height: 300px;
+    text-align: center;
+    border-radius: 10px;
+    background: #fefbf0;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 20px;
+  }
+
+   .header_img{
+    width: 100%;
+    margin-bottom: 30px;
+    text-align: center;
+   }
+
+   h2{
+    font-size: 16px;
+    margin-bottom: 10px;
+   }
+
+   span{
+    font-size: 14px;
+    color: #898682;
+   }
+
+   #btn{
+    display: block;
+    text-decoration: none;
+    width: 150px;
+    height: 25px;
+    color: #f5d2a1;
+    text-align: center;
+    line-height: 25px;
+    border: 1px solid #f5d2a1;
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 45px;
+   }
+
+   #back{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    right: 0;
+    top: -35px;
+   }
+
+   #back::before{
+    display: block;
+    width: 16px;
+    height: 1px;
+    content: "";
+    position: absolute;
+    background: #fff;
+    top: 8px;
+    left: 2px;
+    transform:rotate(45deg);
+   }
+
+   #back::after{
+    display: block;
+    width: 1px;
+    height: 16px;
+    content: "";
+    position: absolute;
+    background: #fff;
+    top: 1px;
+    left: 10px;
+    transform:rotate(45deg);
+   }
+</style>
+</head>
+<body>
+  <div class="page-hide">
+     <div class="container">
+       <div id="back"></div>
+       <div class="header_img">
+         <img src="1.png" class="img">
+       </div>
+       <h2>恭喜你获得免费试听特权</h2>
+       <span>不用花钱也可以收听付费节目</span>
+       <a href="JavaScript:;" id="btn">如何使用特权</a>
+     </div>
+   </div>
+   <script src="http://cdn.bootcss.com/jquery/1.10.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $('#back').click(function () {
+          $('.page-hide').hide();
+        })
+    </script>
+</body>
+</html>
